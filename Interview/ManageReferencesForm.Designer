@@ -1,0 +1,108 @@
+﻿namespace StoneShield
+{
+    partial class ManageReferencesForm
+    {
+        private System.Windows.Forms.Button createButton;
+        private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button backButton;
+
+        private System.Windows.Forms.DataGridView refsTable;
+
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            // Initialize refsTable
+            this.refsTable = new System.Windows.Forms.DataGridView
+            {
+                Location = new System.Drawing.Point(20, 20),
+                Size = new System.Drawing.Size(760, 400),
+                ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize,
+                ReadOnly = true,
+                AllowUserToAddRows = false,
+                AllowUserToDeleteRows = false,
+                SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+            };
+
+            refsTable.Columns.Add("ID", "ID");
+            refsTable.Columns.Add("Nome", "Nome");
+            refsTable.Columns.Add("Velocidade", "Velocidade");
+            refsTable.Columns.Add("Cut", "Cut");
+            refsTable.Columns.Add("Batch", "Batch");
+            refsTable.Columns.Add("Clean", "Clean");
+
+            // Initialize Create Button
+            this.createButton = new System.Windows.Forms.Button
+            {
+                Text = "Create",
+                Location = new System.Drawing.Point(20, 450),
+                Size = new System.Drawing.Size(120, 40)
+            };
+            this.createButton.Click += new System.EventHandler(this.CreateButton_Click);
+
+            // Initialize Edit Button
+            this.editButton = new System.Windows.Forms.Button
+            {
+                Text = "Edit",
+                Location = new System.Drawing.Point(160, 450),
+                Size = new System.Drawing.Size(120, 40)
+            };
+            this.editButton.Click += new System.EventHandler(this.EditButton_Click);
+
+            // Initialize Delete Button
+            this.deleteButton = new System.Windows.Forms.Button
+            {
+                Text = "Delete",
+                Location = new System.Drawing.Point(300, 450),
+                Size = new System.Drawing.Size(120, 40)
+            };
+            this.deleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+
+            // Initialize Back Button
+            this.backButton = new System.Windows.Forms.Button
+            {
+                Text = "Back",
+                Location = new System.Drawing.Point(440, 450),
+                Size = new System.Drawing.Size(120, 40)
+            };
+            this.backButton.Click += new System.EventHandler(this.BackButton_Click);
+
+            // Add controls to form
+            this.Controls.Add(this.refsTable);
+            this.Controls.Add(this.createButton);
+            this.Controls.Add(this.editButton);
+            this.Controls.Add(this.deleteButton);
+            this.Controls.Add(this.backButton);
+
+            // Set Form Properties
+            this.Text = "Manage References";
+            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+        }
+
+        #endregion
+    }
+}
